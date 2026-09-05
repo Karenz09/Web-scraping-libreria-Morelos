@@ -1,10 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-# Guardar el script completo en un archivo .py local
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 
 url = "https://libreriamorelos.mx/novedades/index.html"
 response = requests.get(url)
@@ -35,7 +31,3 @@ for libro in libros:
 df = pd.DataFrame(datos)
 df.to_csv("catalogo_libros_LibreriaMorelos.csv", index=False)
 print("Scraping exitoso y archivo catalogo_libros.csv creado.")
-"""
-
-with open("texto.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
